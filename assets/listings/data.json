@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "address": "639 Royal York Road, Toronto",
+        "area": {
+            "en": "(Stonegate-Queensway), Ontario",
+            "zh": "(Stonegate-Queensway), 安大略省"
+        },
+        "price": "$1,538,800",
+        "image": "assets/listings/images/listing-1.jpg",
+        "mlsLink": "#",
+        "description": {
+            "en": "Stunning home with modern finishes.",
+            "zh": "拥有现代装修的精美住宅。"
+        },
+        "specs": {
+            "beds": "3+1",
+            "baths": "3",
+            "sqft": "3500+"
+        },
+        "tag": "sale"
+    },
+    {
+        "id": 2,
+        "address": "6 Vonda Avenue, Toronto",
+        "area": {
+            "en": "(Willowdale East), Ontario",
+            "zh": "(Willowdale East), 安大略省"
+        },
+        "price": "$1,798,000",
+        "image": "assets/listings/images/listing-2.jpg",
+        "mlsLink": "#",
+        "description": {
+            "en": "Luxurious living in a prime location.",
+            "zh": "位于黄金地段的豪华生活。"
+        },
+        "specs": {
+            "beds": "5+2",
+            "baths": "3",
+            "sqft": "2000+"
+        },
+        "tag": "sale"
+    },
+    {
+        "id": 3,
+        "address": "3114 - 98 Lillian Street, Toronto",
+        "area": {
+            "en": "(Mount Pleasant West), Ontario",
+            "zh": "(Mount Pleasant West), 安大略省"
+        },
+        "price": "$2,500/Monthly",
+        "image": "assets/listings/images/listing-3.jpg",
+        "mlsLink": "#",
+        "description": {
+            "en": "Modern condo with great views.",
+            "zh": "拥有绝佳视野的现代公寓。"
+        },
+        "specs": {
+            "beds": "1+1",
+            "baths": "1",
+            "sqft": "500+"
+        },
+        "tag": "rent"
+    },
+    {
+        "id": 4,
+        "address": "74 - 400 Alex Gardner Circle, Aurora",
+        "area": {
+            "en": "(Aurora Village), Ontario",
+            "zh": "(Aurora Village), 安大略省"
+        },
+        "price": "$649,900",
+        "image": "assets/listings/images/listing-4.jpg",
+        "mlsLink": "#",
+        "description": {
+            "en": "Cozy townhouse in a quiet neighborhood.",
+            "zh": "安静社区的舒适联排别墅。"
+        },
+        "specs": {
+            "beds": "2",
+            "baths": "3",
+            "sqft": "1200+"
+        },
+        "tag": "sale"
+    }
+]

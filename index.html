@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Wei - Taihome Realty</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.jpg" alt="Taihome Realty Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#bio" data-i18n="nav_bio">About Adam</a></li>
+                <li><a href="#listings" data-i18n="nav_listings">Exclusive Listings</a></li>
+                <li><a href="#contact" class="btn-gold" data-i18n="nav_contact">Contact Me</a></li>
+                <li><button id="lang-toggle" class="btn-gold" style="padding: 8px 15px; margin-left: 10px;">CN</button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-banner-container">
+            <img src="assets/images/hero-banner.jpg" alt="Taihome Realty Banner" class="hero-banner-img">
+        </div>
+        <div class="container hero-content text-center">
+            <h1 data-i18n="hero_title">Expert Real Estate Services <br> in Toronto</h1>
+            <p data-i18n="hero_desc">Dedicated to helping you find your dream home and build wealth through real estate.
+            </p>
+            <a href="#listings" class="btn-gold" data-i18n="hero_btn">View Listings</a>
+        </div>
+    </header>
+
+    <!-- Bio Section -->
+    <section id="bio" class="section bio-section">
+        <div class="container bio-container">
+            <div class="bio-image">
+                <img src="assets/images/adam-profile.jpg" alt="Adam Wei">
+                <div class="frame-decoration"></div>
+            </div>
+            <div class="bio-text">
+                <h2 class="section-title" data-i18n="bio_title">Meet Adam Wei</h2>
+                <h3 class="subtitle" data-i18n="bio_subtitle">Broker of Record</h3>
+                <p data-i18n="bio_desc">With years of experience in the Toronto real estate market, I provide
+                    professional, reliable, and personalized services to help you achieve your property goals. Whether
+                    you are buying, selling, renting, or investing, I am committed to delivering the best results.</p>
+                <div class="credentials">
+                    <div class="credential-item">
+                        <i class="fas fa-home"></i>
+                        <span data-i18n="cred_res">Residential & Commercial</span>
+                    </div>
+                    <div class="credential-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span data-i18n="cred_inv">Investment Expert</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listings Section -->
+    <section id="listings" class="section listings-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="listings_title">Featured Listings</h2>
+            <p class="section-desc text-center" data-i18n="listings_desc">Explore our exclusive properties available
+                now.</p>
+
+            <div id="listings-container" class="listings-grid">
+                <!-- Listings will be injected here by JavaScript -->
+                <div class="text-center" style="grid-column: 1/-1;" data-i18n="loading_listings">Loading listings...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title text-center text-light" data-i18n="contact_title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(647) 701-5158</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>adamwei2016@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-weixin"></i>
+                        <div>
+                            <h4>WeChat ID</h4>
+                            <p>mmexport166147008954</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Simple Form -->
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" data-i18n-ph="contact_name_ph" required>
+                    <input type="email" placeholder="Your Email" data-i18n-ph="contact_email_ph" required>
+                    <textarea placeholder="Message" rows="4" data-i18n-ph="contact_msg_ph" required></textarea>
+                    <button type="submit" class="btn-gold block-btn" data-i18n="contact_btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p data-i18n="footer_rights">&copy; 2025 Taihome Realty Inc., Brokerage*. All Rights Reserved.</p>
+            <p class="disclaimer" data-i18n="footer_disclaimer">*Independently Owned and Operated</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/translations.js"></script>
+    <script>
+        // State
+        let currentLang = 'en';
+        let listingsData = [];
+
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Language Toggle
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'CN' : 'EN';
+            updateContent();
+            renderListings(); // Re-render listings with new language
+        });
+
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    element.innerHTML = translations[currentLang][key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-ph]').forEach(element => {
+                const key = element.getAttribute('data-i18n-ph');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    element.placeholder = translations[currentLang][key];
+                }
+            });
+        }
+
+        // Render Listings
+        function renderListings() {
+            const listingsContainer = document.getElementById('listings-container');
+            listingsContainer.innerHTML = '';
+
+            listingsData.forEach(listing => {
+                const card = document.createElement('div');
+                card.className = 'listing-card';
+
+                // Get localized data
+                // Handle tag: if it's an object use index, else string
+                let tagText = listing.tag;
+                if (typeof listing.tag === 'object') {
+                    tagText = listing.tag[currentLang] || listing.tag.en;
+                } else {
+                    // Fallback for simple string if not updated
+                    tagText = currentLang === 'en' ? listing.tag : (listing.tag.toLowerCase().includes('rent') ? '出租' : '出售');
+                }
+
+                // Handle area and description objects
+                const area = listing.area[currentLang] || listing.area;
+                const description = listing.description[currentLang] || listing.description;
+
+                const tagClass = (typeof listing.tag === 'string' ? listing.tag : listing.tag.en).toLowerCase().includes('rent') ? 'rent' : '';
+
+                card.innerHTML = `
+                    <div class="listing-image">
+                        <div class="listing-tag ${tagClass}">${tagText}</div>
+                        <img src="${listing.image}" alt="${listing.address}">
+                    </div>
+                    <div class="listing-details">
+                        <div class="listing-price">${listing.price}</div>
+                        <h4 class="listing-address">${listing.address}</h4>
+                        <p class="listing-area">${area}</p>
+                        <p class="listing-desc" style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">${description}</p>
+                        <div class="listing-specs">
+                            <span><i class="fas fa-bed"></i> ${listing.specs.beds} Beds</span>
+                            <span><i class="fas fa-bath"></i> ${listing.specs.baths} Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> ${listing.specs.sqft} Sq Ft</span>
+                        </div>
+                    </div>
+                `;
+                listingsContainer.appendChild(card);
+            });
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            const listingsContainer = document.getElementById('listings-container');
+
+            fetch('assets/listings/data.json')
+                .then(response => response.json())
+                .then(listings => {
+                    listingsData = listings;
+                    renderListings();
+                    updateContent(); // Apply initial translations after listings are loaded
+                })
+                .catch(error => {
+                    console.error('Error loading listings:', error);
+                    listingsContainer.innerHTML = '<p class="text-center" data-i18n="loading_listings">Failed to load listings.</p>';
+                    updateContent(); // Ensure error message potentially translates if we had one
+                });
+        });
+    </script>
+</body>
+
+</html>
