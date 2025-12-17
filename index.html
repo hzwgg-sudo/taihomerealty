@@ -29,7 +29,7 @@
                 <li><a href="#bio" data-i18n="nav_bio">About Adam</a></li>
                 <li><a href="#listings" data-i18n="nav_listings">Exclusive Listings</a></li>
                 <li><a href="#contact" class="btn-gold" data-i18n="nav_contact">Contact Me</a></li>
-                <li><button id="lang-toggle" class="btn-gold" style="padding: 8px 15px; margin-left: 10px;">CN</button>
+                <li><button id="lang-toggle" class="btn-gold" style="padding: 8px 15px; margin-left: 10px;">中文</button>
                 </li>
             </ul>
             <div class="hamburger">
@@ -196,27 +196,33 @@
                 }
 
                 // Handle area and description objects
-                const area = listing.area[currentLang] || listing.area;
-                const description = listing.description[currentLang] || listing.description;
+                // Handle area, description, and mlsLink objects
+                const description = typeof listing.description === 'object' ? (listing.description[currentLang] || listing.description.en) : listing.description;
+                const area = typeof listing.area === 'object' ? (listing.area[currentLang] || listing.area.en) : listing.area;
+                const mlsLink = typeof listing.mlsLink === 'object' ? (listing.mlsLink[currentLang] || listing.mlsLink.en) : listing.mlsLink;
 
                 const tagClass = (typeof listing.tag === 'string' ? listing.tag : listing.tag.en).toLowerCase().includes('rent') ? 'rent' : '';
 
                 card.innerHTML = `
-                    <div class="listing-image">
-                        <div class="listing-tag ${tagClass}">${tagText}</div>
-                        <img src="${listing.image}" alt="${listing.address}">
-                    </div>
-                    <div class="listing-details">
-                        <div class="listing-price">${listing.price}</div>
-                        <h4 class="listing-address">${listing.address}</h4>
-                        <p class="listing-area">${area}</p>
-                        <p class="listing-desc" style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">${description}</p>
-                        <div class="listing-specs">
-                            <span><i class="fas fa-bed"></i> ${listing.specs.beds} Beds</span>
-                            <span><i class="fas fa-bath"></i> ${listing.specs.baths} Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> ${listing.specs.sqft} Sq Ft</span>
+                    <a href="${mlsLink}" target="_blank" class="listing-image-link">
+                        <div class="listing-image">
+                            <div class="listing-tag ${tagClass}">${tagText}</div>
+                            <img src="${listing.image}" alt="${listing.address}">
                         </div>
-                    </div>
+                    </a>
+                    <a href="${mlsLink}" target="_blank" class="listing-details-link">
+                        <div class="listing-details">
+                            <div class="listing-price">${listing.price}</div>
+                            <h4 class="listing-address">${listing.address}</h4>
+                            <p class="listing-area">${area}</p>
+                            <p class="listing-desc" style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">${description}</p>
+                            <div class="listing-specs">
+                                <span><i class="fas fa-bed"></i> ${listing.specs.beds} Beds</span>
+                                <span><i class="fas fa-bath"></i> ${listing.specs.baths} Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> ${listing.specs.sqft} Sq Ft</span>
+                            </div>
+                        </div>
+                    </a>
                 `;
                 listingsContainer.appendChild(card);
             });

@@ -1,17 +1,18 @@
 [
     {
         "id": 1,
-        "address": "639 Royal York Road, Toronto",
-        "area": {
-            "en": "(Stonegate-Queensway), Ontario",
-            "zh": "(Stonegate-Queensway), 安大略省"
-        },
+        "address": "639 Royal York Road",
+        "area": "Toronto (Stonegate-Queensway), Ontario, M8Y 2S9",
         "price": "$1,538,800",
-        "image": "assets/listings/images/listing-1.jpg",
-        "mlsLink": "#",
+        "image": "assets/listings/images/639-royal-york-road.jpg",
         "description": {
             "en": "Stunning home with modern finishes.",
             "zh": "拥有现代装修的精美住宅。"
+        },
+        "mlsNumber": "W12549162",
+        "mlsLink": {
+            "en": "https://www.realtor.ca/real-estate/29108101/639-royal-york-road-toronto-stonegate-queensway-stonegate-queensway",
+            "zh": "https://www.realmaster.com/zh-cn/toronto-on/639-royal-york-rd/stonegate-queensway-TRBW12549162"
         },
         "specs": {
             "beds": "3+1",
@@ -22,17 +23,18 @@
     },
     {
         "id": 2,
-        "address": "6 Vonda Avenue, Toronto",
-        "area": {
-            "en": "(Willowdale East), Ontario",
-            "zh": "(Willowdale East), 安大略省"
-        },
+        "address": "6 Vonda Avenue",
+        "area": "Toronto (Willowdale East), Ontario, M2N 5E8",
         "price": "$1,798,000",
-        "image": "assets/listings/images/listing-2.jpg",
-        "mlsLink": "#",
+        "image": "assets/listings/images/6-vonda-avenue.jpg",
         "description": {
             "en": "Luxurious living in a prime location.",
             "zh": "位于黄金地段的豪华生活。"
+        },
+        "mlsNumber": "C12549024",
+        "mlsLink": {
+            "en": "https://www.realtor.ca/real-estate/29107947/6-vonda-avenue-toronto-willowdale-east-willowdale-east",
+            "zh": "https://www.realmaster.com/zh-cn/toronto-on/6-vonda-ave/willowdale-east-TRBC12549024"
         },
         "specs": {
             "beds": "5+2",
@@ -43,17 +45,18 @@
     },
     {
         "id": 3,
-        "address": "3114 - 98 Lillian Street, Toronto",
-        "area": {
-            "en": "(Mount Pleasant West), Ontario",
-            "zh": "(Mount Pleasant West), 安大略省"
-        },
+        "address": "3114 - 98 LILLIAN STREET",
+        "area": "Toronto (Mount Pleasant West), Ontario, M4S 0A5",
         "price": "$2,500/Monthly",
-        "image": "assets/listings/images/listing-3.jpg",
-        "mlsLink": "#",
+        "image": "assets/listings/images/3114-98-lillian-street.jpg",
         "description": {
             "en": "Modern condo with great views.",
             "zh": "拥有绝佳视野的现代公寓。"
+        },
+        "mlsNumber": "C12533242",
+        "mlsLink": {
+            "en": "https://www.realtor.ca/real-estate/29091619/3114-98-lillian-street-toronto-mount-pleasant-west-mount-pleasant-west",
+            "zh": "https://www.realmaster.com/zh-cn/toronto-on/98-lillian-st/3114-mount-pleasant-west-TRBC12533242"
         },
         "specs": {
             "beds": "1+1",
@@ -64,17 +67,18 @@
     },
     {
         "id": 4,
-        "address": "74 - 400 Alex Gardner Circle, Aurora",
-        "area": {
-            "en": "(Aurora Village), Ontario",
-            "zh": "(Aurora Village), 安大略省"
-        },
+        "address": "74 - 400 Alex Gardner Circle",
+        "area": "Aurora(Aurora Village), Ontario, L4G 3G5",
         "price": "$649,900",
-        "image": "assets/listings/images/listing-4.jpg",
-        "mlsLink": "#",
+        "image": "assets/listings/images/74-400-alex-gardner-circle.jpg",
         "description": {
             "en": "Cozy townhouse in a quiet neighborhood.",
             "zh": "安静社区的舒适联排别墅。"
+        },
+        "mlsNumber": "N12501328",
+        "mlsLink": {
+            "en": "https://www.realtor.ca/real-estate/29058837/74-400-alex-gardner-circle-aurora-aurora-village-aurora-village",
+            "zh": "https://www.realmaster.com/zh-cn/aurora-on/400-alex-gardner-cir/74-aurora-village-TRBN12501328"
         },
         "specs": {
             "beds": "2",
