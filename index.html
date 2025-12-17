@@ -155,7 +155,7 @@
         // Language Toggle
         document.getElementById('lang-toggle').addEventListener('click', () => {
             currentLang = currentLang === 'en' ? 'zh' : 'en';
-            document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'CN' : 'EN';
+            document.getElementById('lang-toggle').textContent = currentLang === 'en' ? '中文' : 'EN';
             updateContent();
             renderListings(); // Re-render listings with new language
         });
